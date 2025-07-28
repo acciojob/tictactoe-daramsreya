@@ -33,11 +33,10 @@ function startGame(){
     players=[p1,p2];
     document.querySelector(".setup").style.display="none";
     document.querySelector(".message").style.display="block";
-    console.log(message.value);
     //document.querySelector(".scoreboard").style.display='flex';
     //document.querySelector("reset").style.display="inline-block";
     document.querySelector(".board").style.display="grid";
-    message.innerText=`${players[turn]} you're up`;
+    message.innerText=`${players[turn]}, you're up`;
     //board.style.display="grid";
 
     renderBoard();
@@ -69,7 +68,7 @@ function handleMove(e){
         return;
     }
     turn = 1-turn;
-	message.innerText=`${players[turn]} you're up`
+	message.innerText=`${players[turn]}, you're up`
     //updateMessage();
 }
 //function updateMessage(){
