@@ -1,8 +1,8 @@
 //your JS code here. If required.
 const submit=document.getElementById("submit");
-const message=document.getElementsByClassName(".message");
+const message=document.querySelector(".message");
 //const reset=document.getElementById("reset");
-const board=document.getElementsByClassName(".board");
+const board=document.querySelector(".board");
 const cells = document.querySelectorAll(".cell");
 
 let players=["",""];
