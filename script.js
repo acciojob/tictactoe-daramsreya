@@ -55,7 +55,7 @@ function handleMove(e){
     const id = parseInt(e.target.id) - 1;
     if (boardState[id] !== null) return;
 
-    const mark= turn === 0 ? 'X' : 'O';
+    const mark= turn === 0 ? 'x' : 'o';
     boardState[id] =mark;
     e.target.innerText=mark;
     e.target.classList.add('disabled');
