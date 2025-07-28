@@ -64,7 +64,7 @@ function handleMove(e){
         winningLine.forEach(i=>{
             document.getElementById((i+1).toString()).classList.add("winner");
         })
-        message.innerText=`${players[turn]}, congratulations you won!`;
+        message.innerText=`${players[turn]} congratulations you won!`;
         return;
     }
     turn = 1-turn;
