@@ -37,7 +37,7 @@ function startGame(){
     //document.querySelector(".scoreboard").style.display='flex';
     //document.querySelector("reset").style.display="inline-block";
     document.querySelector(".board").style.display="grid";
-    message.innerText=`${players[turn]} you are up`;
+    message.innerText=`${players[turn]} you're up`;
     //board.style.display="grid";
 
     renderBoard();
@@ -57,7 +57,7 @@ function handleMove(e){
     if (boardState[id] !== null) return;
 
     const mark= turn === 0 ? 'X' : 'O';
-    boardState[id-1] =mark;
+    boardState[id] =mark;
     e.target.innerText=mark;
     e.target.classList.add('disabled');
     const winningLine=wins.find(line=>line.every(i=>boardState[i]===mark));
@@ -65,11 +65,11 @@ function handleMove(e){
         winningLine.forEach(i=>{
             document.getElementById((i+1).toString()).classList.add("winner");
         })
-        message.innerText=`${players[turn]} congratulations! you are the winner`;
+        message.innerText=`${players[turn]}, congratulations you won!`;
         return;
     }
     turn = 1-turn;
-	message.innerText=`${players[turn]} you are up`
+	message.innerText=`${players[turn]} you're up`
     //updateMessage();
 }
 //function updateMessage(){
