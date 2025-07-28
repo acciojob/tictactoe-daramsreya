@@ -1,1 +1,73 @@
 /*  your css code here. If applicable */
+
+.container{
+    text-align: center;
+    width: 360px;
+    margin: 40px 0;
+    font-family: sans-serif;
+   
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.setup lable{
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.setup input{
+    width: 200px;
+    padding: 6px;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+#submit{
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    gap: 6px;
+    margin-top: 12px;
+    justify-content: center;
+    grid-auto-rows: 100px;
+}
+
+.cell{
+    font-size: 48px;
+    background: #ffAB91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px solid #333;
+}
+
+.cell.diabled{
+    pointer-events: none;
+}
+
+.cell.winner{
+    background-color: blue;
+    color: white;
+}
+.message{
+    font-size: 24px;
+    margin: 20px 0;
+    min-height:32px ;
+}
+
+.message, .board {
+    display: none;
+}
