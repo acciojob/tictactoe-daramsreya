@@ -65,12 +65,13 @@ function handleMove(e){
         winningLine.forEach(i=>{
             document.getElementById((i+1).toString()).classList.add("winner");
         })
-        message.innerTeat=`${players[turn]} congratulations! you are the winner`;
+        message.innerText=`${players[turn]} congratulations! you are the winner`;
         return;
     }
     turn = 1-turn;
-    updateMessage();
+	message.innerText=`${players[turn]} you are up`
+    //updateMessage();
 }
-function updateMessage(){
-    message.innerText=`${players[turn]} you are up`
-}
+//function updateMessage(){
+  //  message.innerText=`${players[turn]} you are up`
+//}
